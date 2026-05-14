@@ -84,7 +84,9 @@ return $stmt->execute([
         ':message' => $message
     ]);
 }
-    
+    public function getConnection() {
+    return $this->conn;
+}
 
     public function getUserDetails(int $userId) {
         // TODO:
@@ -111,3 +113,4 @@ return $stmt->execute([
     
 }
 ?>
+
