@@ -23,6 +23,10 @@ $property = $db->getPropertyById($propertyId);
 
     <?php if (isset($_SESSION['user']) && in_array($_SESSION['user']['userType'], ['buyer', 'renter'], true)): ?>
         <a href="submit_inquiry.php?propertyId=<?= (int)$property['propertyId'] ?>">Submit Inquiry</a>
+
+        <br><br>
+
+        <a href="favorite_property.php?propertyId=<?= (int)$property['propertyId'] ?>">Add to Favorites</a>
     <?php endif; ?>
 <?php endif; ?>
 
